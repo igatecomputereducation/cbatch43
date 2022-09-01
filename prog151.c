@@ -21,8 +21,6 @@ int main()
 	else
 		printf("Not a prime number");
 	
-	
-	
 	return 0;
 }
 
