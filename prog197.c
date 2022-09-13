@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	int a[50],i,n,pos;
+	int a[50],b[50],i,n;
 	
 	printf("How many elements:");
 	scanf("%i",&n);
@@ -10,16 +10,12 @@ int main()
 	for(i=0;i<n;i++)
 		scanf("%i",&a[i]);
 	
-	printf("Position:");
-	scanf("%i",&pos);
+	for(i=0;i<n;i++)
+		b[i]=a[i];
 	
-	if(pos<1 || pos>n)
-		printf("Invalid position");
-	else
-	{
-		pos--;
-		printf("%i",a[pos]);
-	}
+	printf("The result array\n");
+	for(i=0;i<n;i++)
+		printf("%5i",b[i]);
 	return 0;
 }
 

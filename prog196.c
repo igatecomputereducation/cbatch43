@@ -10,7 +10,7 @@ int main()
 	for(i=0;i<n;i++)
 		scanf("%i",&a[i]);
 	
-	printf("Position:");
+	printf("Enter position to delete:");
 	scanf("%i",&pos);
 	
 	if(pos<1 || pos>n)
@@ -18,7 +18,15 @@ int main()
 	else
 	{
 		pos--;
-		printf("%i",a[pos]);
+		
+		for(i=pos;i<n-1;i++)
+			a[i]=a[i+1];
+		
+		n--;
+		
+		printf("The result array\n");
+		for(i=0;i<n;i++)
+			printf("%5i",a[i]);
 	}
 	return 0;
 }

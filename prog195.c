@@ -10,7 +10,7 @@ int main()
 	for(i=0;i<n;i++)
 		scanf("%i",&a[i]);
 	
-	printf("Position:");
+	printf("Enter position:");
 	scanf("%i",&pos);
 	
 	if(pos<1 || pos>n)
@@ -18,8 +18,20 @@ int main()
 	else
 	{
 		pos--;
-		printf("%i",a[pos]);
+		
+		for(i=n-1;i>=pos;i--)
+			a[i+1]=a[i];
+		
+		printf("Enter element:");
+		scanf("%i",&a[pos]);
+		
+		n++;
+		
+		printf("The result array\n");
+		for(i=0;i<n;i++)
+			printf("%5i",a[i]);
 	}
+
 	return 0;
 }
 
