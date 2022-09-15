@@ -1,7 +1,9 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
 	int a[50][50],n,m,i,j,sum;
+	float norm;
 	
 	printf("Enter the class of matrix\n");
 	scanf("%i%i",&n,&m);
@@ -13,14 +15,15 @@ int main()
 			scanf("%i",&a[i][j]);
 	}
 	
-	printf("Sum of each row\n");
+	sum=0;
 	for(i=0;i<n;i++)
 	{
-		sum=0;
 		for(j=0;j<m;j++)
-			sum=sum+a[i][j];
-		printf("%i\n",sum);
+				sum=sum+a[i][j]*a[i][j];
 	}
+	
+	norm=sqrt(sum);
+	printf("Norm of matrix %f\n",norm);
 	return 0;
 }
 

@@ -2,6 +2,7 @@
 int main()
 {
 	int a[50][50],n,m,i,j,sum;
+	float mean;
 	
 	printf("Enter the class of matrix\n");
 	scanf("%i%i",&n,&m);
@@ -13,14 +14,15 @@ int main()
 			scanf("%i",&a[i][j]);
 	}
 	
-	printf("Sum of each row\n");
+	sum=0;
 	for(i=0;i<n;i++)
 	{
-		sum=0;
 		for(j=0;j<m;j++)
-			sum=sum+a[i][j];
-		printf("%i\n",sum);
+				sum=sum+a[i][j];
 	}
+	
+	mean=(float)sum/(n*m);
+	printf("Mean of matrix %f\n",mean);
 	return 0;
 }
 

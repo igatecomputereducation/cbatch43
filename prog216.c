@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	int a[50][50],n,m,i,j,sum;
+	int a[50][50],b[50][50],n,m,i,j;
 	
 	printf("Enter the class of matrix\n");
 	scanf("%i%i",&n,&m);
@@ -13,13 +13,18 @@ int main()
 			scanf("%i",&a[i][j]);
 	}
 	
-	printf("Sum of each row\n");
 	for(i=0;i<n;i++)
 	{
-		sum=0;
 		for(j=0;j<m;j++)
-			sum=sum+a[i][j];
-		printf("%i\n",sum);
+			b[j][i]=a[i][j];
+	}
+	
+	printf("The transpose of matrix\n");
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+			printf("%5i",b[i][j]);
+		printf("\n\n");
 	}
 	return 0;
 }
