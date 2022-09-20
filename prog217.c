@@ -24,8 +24,7 @@ int main()
 			for(j=0;j<q;j++)
 				scanf("%i",&b[i][j]);
 		}
-		
-		
+
 		for(i=0;i<n;i++)
 		{
 			for(j=0;j<q;j++)
@@ -44,7 +43,6 @@ int main()
 				printf("%5i",c[i][j]);
 			printf("\n\n");
 		}
-		
 	}
 	else
 		printf("Can't multiply'");
